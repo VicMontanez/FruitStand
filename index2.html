@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+           h1 {
+               color: red;
+           }
+           
+           #title {
+               color: blue;
+           }
+            
+            #slogan {
+                color: green;
+            }
+            
+            .style1 {
+                font-style: italic;
+            }
+            
+            
+            div {
+                width: 300px;
+                border: 1px solid green;
+                padding:25px;
+                margin:10px;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                border-radius: 9px;
+                
+                
+            }
+            div.grand {
+                float:left;
+            }
+            .left {
+                float: left;
+                width: 15%
+            }
+            .w3-row-padding{
+                padding: 0 8px
+            }
+            
+        .imgFloat {
+                float: left;
+                
+            }
+        #wrapImages {
+            float: none;
+            display: flex;
+            flex-direction: left;
+        }
+        </style>
+    
+    </head>
+    
+    
+    <body>
+        
+        <div>
+        <h1>Felicias Fruit Stand</h1>
+        <h5 id="title" class="style1">Department Totals Reports</h5>
+        </div>
+        
+       
+            <div class="left">
+                <img src="images/apple.jpg" alt="Sandwich" style="width:100%">
+                <h3>The Perfect Sandwich, A Real NYC Classic</h3>
+                <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
+            <div class="left">
+                <img src="images/oranges.jpeg" alt="Steak" style="width:100%">
+                <h3>Let Me Tell You About This Steak</h3>
+                <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
+            <div class="left">
+                <img src="images/pear.jpg" alt="Cherries" style="width:100%">
+                <h3>Cherries, interrupted</h3>
+                <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                <p>What else?</p>
+            </div>
+            <div class="left">
+                <img src="images/grapes.jpg" alt="Pasta and Wine" style="width:100%">
+                <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
+                <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
+        </div>
+        
+        <div class = "grand">
+            <h5 id="slogan" class="style1">Our fruit are the freshest in town!</h5>
+            <p id="sentence">Try our sweet apple pies too!</p>
+            
+            <span>Total Company Salaries: $</span><p id="companySalaryTotal">0000000</p>
+       
+        </div>
+        
+        
+        
+        
+         
+           
+        
+        
+        
+        <script type="text/javascript">
+        
+        //document.getElementById("slogan").innerText = "Accurate and Acute Accounting Information!";
+         
+        document.getElementById("sentence").innerText = "Listed below is the total sale information for Felicias Fruit";
+ 
+        var salaryobj = {
+        fruitSales: [50, 25, 15, 10],
+        fruitNames: ["Apple", "Orange", "Pear", "Grape"  ],
+        
+        companyGrandTotal: function() {
+            var companytotal = 0;
+            for (var i = 0; i < this.fruitSales.length; i++) {
+                companytotal += this.fruitSales[i];
+            }
+            document.getElementById("companySalaryTotal").innerText = companytotal;
+        }
+    };   
+            
+    salaryobj.companyGrandTotal();
+    
+    
+    
+        </script>
+        
+    </body>
+</html>
